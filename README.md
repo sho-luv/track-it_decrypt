@@ -15,30 +15,34 @@
 # track-it_decrypt.py
 This is a tool the decrypts Track-It passwords that are encrypted with a fixed key and IV ("NumaraIT") using the DES algorithm
 
-## notes:
+## Notes:
         BMC Track-It! uses the known iv and key value: 'NumaraTI'. This allows
-        for decryption of the passwords from track-it!.
+        for decryption of the passwords from track-it!. These files are often found
+        on shares called TrackIt or something simular
 
         also, versions up to 11.3 are vulnerable to password reset exploit
 
-## references:
+## References:
         https://www.exploit-db.com/exploits/43883
         https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4872
         https://www.rapid7.com/db/modules/auxiliary/gather/trackit_sql_domain_creds
         https://github.com/rapid7/metasploit-framework/blob/master//modules/auxiliary/gather/trackit_sql_domain_creds.rb
         https://github.com/pedrib/PoC/tree/master/exploits/TrackPwn
 
-## find it:
+## Find it:
+####  find "track-it!" services that might be vulnerable via metasploit:
         masscan -p 9010 -oB track-it -iL range
         nmap -p 9010 --open -sV -iL range
+####  find "track-it!" shares that might have encrypted passwords in them:
+        cme smb smb.txt -u user -p pass --shares | grep -i track
 
-## exploit it:
+## Exploit it:
         auxiliary/gather/trackit_sql_domain_creds
         auxiliary/scanner/http/bmc_trackit_passwd_reset
         exploit/windows/http/trackit_file_upload
 
-## decrypt password:
-        This tool foo!
+## Decrypt password:
+        https://github.com/sho-luv/track-it_decrypt (This tool foo!)
 
 ## Usage track-it_decrypt.py
 ```
