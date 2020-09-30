@@ -49,16 +49,16 @@ ___ ____ ____ ____ _  _    _ ___   /   ___  ____ ____ ____ _   _ ___  ___
  |  |  \ |  | |___ | \_    |  |  .     |__/ |___ |___ |  \   |   |     |
 
 
-usage: track-it_decrypt.py [-h] hash_value
+usage: track-it_decrypt.py [-h] [-d b64_hash] [-e cleartext]
 
-Track-It! stores its passwords DES encryption that is then Base64ed and stored. This reverses this encryption process when the default
-Track-It! key is: 'NumaraTI'
-
-positional arguments:
-  hash_value  Track-It! Password dehasher.
+Track-It! stores its passwords DES encryption that is then Base64ed and stored. This reverses this encryption
+process when the default Track-It! key is: 'NumaraTI'
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help    show this help message and exit
+  -d b64_hash   Track-It Password hash.
+  -e cleartext  "flag discreption"
+
 ```
 ## Example:
 ![track-it_decrypte](https://user-images.githubusercontent.com/1679089/94721903-5de8e600-030b-11eb-885a-42f9c0b8ecb6.gif)
