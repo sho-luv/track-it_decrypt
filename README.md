@@ -60,3 +60,5 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
 ```
+## Example:
+![track-it_decrypte](https://user-images.githubusercontent.com/1679089/94721903-5de8e600-030b-11eb-885a-42f9c0b8ecb6.gif)
