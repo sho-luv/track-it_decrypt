@@ -13,7 +13,7 @@
 </p>
 
 # track-it_decrypt.py
-This is a tool the decrypts Track-It passwords that are encrypted with a fixed key and IV ("NumaraIT") using the DES algorithm
+This tool decrypts Track-It passwords that are encrypted with a fixed key and IV ("NumaraIT") using the DES algorithm
 
 ## Notes:
         BMC Track-It! uses the known iv and key value: 'NumaraTI'. This allows
